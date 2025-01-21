@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+
+        body{
+            font: normal 20px Arial, Helvetica, sans-serif;
+        }
+
+        input{
+            margin: 0.4em;
+            border-radius: 5px;
+        }
+
+        #butao{
+            background-color: black;
+            color: white;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.229);
+            width: 80px;
+            height: 25px;
+        }
+
+        #butao:hover{
+            cursor: pointer;
+            width: 85px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>De que país você é?</h1>
+
+    Seu país<input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verificar" onclick="calcular()" id="butao">
+
+    <div id="res">
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+
+    function calcular(){
+
+        var txtp = document.getElementById('txtpais')
+        var res = document.querySelector('div#res')
+        var país = (txtpais.value).toLowerCase()
+
+        if(país == 'brasil'){
+            res.innerHTML = `Você é <strong>Brasileiro</strong>!`
+        }
+
+        else{
+            res.innerHTML = `Você é <strong>Estrangeiro</strong>!`
+        }
+
+    }
+
+    </script>
+    
+</body>
+</html>

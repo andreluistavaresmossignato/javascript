@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <!-- Controlando uma árvore DOM -->
+    <style>
+        body{
+            background-color: rgb(47, 127, 255);
+            color: white;
+            font: normal 18pt Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p><!-- Primeiro parágrafo do site -->
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        //d.innerText = 'Estou aguardando...'
+        //window.document.getElementById('msg').innerText = 'Olá!'
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue'
+
+    </script>
+    
+</body>
+<!--
+    Tipos de seleções por DOM
+
+    1- por Marca (por exemplo 'p')
+    2- por ID(#)
+    3- por Nome (name)
+    4- por Classe(.)
+    5- por Seletor(queryselector)
+-->
+</html>
