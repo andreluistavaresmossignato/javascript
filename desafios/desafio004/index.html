@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Troco</title>
+</head>
+<body>
+
+    <h1>Calculando o Troco</h1>
+    
+    <button onclick="comprar()">Comprar produto</button>
+
+    <script>
+
+        function comprar(){
+            let produto = prompt("Que produto você está comprando?")
+            let custo = Number(prompt(`Quanto custa ${produto} que você está comprando?`)).toFixed(2)
+            let valorDado = Number(prompt(`Qual foi o valor que você deu para pagar ${produto}?`)).toFixed(2)
+            let troco = valorDado - custo
+
+            alert(`Você comprou ${produto} que custou ${custo}.\nDeu R$ ${valorDado} em dinheiro e vai receber ${troco} de troco.\nVolte Sempre!`)
+        }
+
+        // voltar mais tarde para corrigir e trocar . por ,
+
+    </script>
+    
+</body>
+</html>
