@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antes e Depois</title>
+    <style>
+
+        button{
+            width: 200px;
+            height: 50px;
+        }
+
+        button:hover{
+            background-color: lightcyan;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Antes e depois</h1>
+
+    <button onclick="acao()">Antecessor e Sucessor</button>
+
+    <script>
+
+        function acao(){
+            let n = Number(prompt("Digite um número inteiro qualquer"))
+            let ant = n - 1
+            let suc = n + 1
+
+            alert(`Antes de ${n}, temos o número ${ant}\nDepois de ${n}, temos o número ${suc}`)
+        }
+
+    </script>
+    
+</body>
+</html>
