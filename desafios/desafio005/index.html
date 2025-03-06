@@ -28,9 +28,38 @@
 <body>
 
     <h1>Conversor de Medidas</h1>
-    <button>Converter</button>
+    <button onclick="conversao()">Converter</button>
 
     <p id="paragrafo">Clique no botão acima para iniciar</p>
+
+    <div id="respostas"></div>
+
+    <script>
+
+        function conversao(){
+            let metros = Number(prompt("Digite uma distância em metros (m)"))
+            let km = metros / 1000
+            let hm = metros / 100
+            let dam = metros / 10
+            let dm = metros * 10
+            let cm = metros * 100
+            let mm = metros * 1000
+
+            let p = document.getElementById('paragrafo').style.display = 'none'
+
+            let r = document.getElementById('respostas')
+            r.innerHTML = `
+            <h1>A distância de ${metros} metros, corresponde a...</h1>
+            <p>${km} quilômetros (Km)</p>
+            <p>${hm} hectômetros (Hm)</p>
+            <p>${dam} decâmetros (Dam)</p>
+            <p>${dm} decímetros (dm)</p>
+            <p>${cm} centímetros (cm)</p>
+            <p>${mm} milímetros (mm)</p>
+            `
+        }
+
+    </script>
     
 </body>
 </html>
