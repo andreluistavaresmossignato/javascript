@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> US$</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            width: 100px;
+            height: 50px;
+        }
+
+        button:hover{
+            background-color: lightcyan;
+        }
+
+        p#paragrafo{
+            display: block;
+        }
+
+        div{
+            margin-top: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Conversor R$ -> US$</h1>
+    <button onclick="converter()">Converter</button>
+    <p id="paragrafo">Clique no botão para iniciar</p>
+    <div id="res"></div>
+
+    <script>
+
+        var dolar = Number(prompt("Antes de mais nada. Quanto está a cotação do dólar agora?"))
+
+        function converter(){
+            let reais = Number(prompt("Quantos R$ você tem na carteira?"))
+            let conversao = reais / dolar
+            let p = document.getElementById('paragrafo').style.display = 'none'
+
+            let res = document.getElementById('res').innerHTML = `Você tem ${conversao.toFixed(2)}US$`
+        }
+
+    </script>
+
+</body>
+</html>
