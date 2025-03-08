@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Desconto</title>
+    <style>
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button{
+            width: 150px;
+            height: 50px;
+        }
+
+        button:hover{
+            background-color: lightcyan;
+        }
+
+        p{
+            display: block;
+            margin: 20px 0px;
+        }
+
+        div{
+            margin-top: 12px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Calcular Desconto</h1>
+    <button onclick="descontar()">Desconto de 10%</button>
+    <p id="paragrafo">Clique no botão acima para iniciar.</p>
+
+    <div id="res"></div>
+
+    <script>
+
+        function descontar(){
+            let produto = prompt("Qual é o produto que você está comprando?")
+            let preco = Number(prompt(`Qual é o preço de ${produto}?`))
+            let displayDesconto = preco * (10/100)
+            let desconto = preco - displayDesconto
+            let p = document.getElementById('paragrafo').style.display = 'none'
+
+            let res = document.getElementById('res').innerHTML = `
+                <h2>Calculando desconto de 10% para ${produto}</h2>
+
+                <p>O preço original era R$${preco}. </p>
+                <p>Você acaba de <strong>ganhar R$${displayDesconto}</strong> de desconto (-10%). </p>
+                <p>No fim, você vai pagar <strong>R$${desconto} </strong>no produto ${produto}.</p>
+            `
+        }
+
+    </script>
+    
+</body>
+</html>
